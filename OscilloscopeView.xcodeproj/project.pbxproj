@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E205881015F235BC002FF41F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205880F15F235BC002FF41F /* UIKit.framework */; };
+		E205881215F235BC002FF41F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881115F235BC002FF41F /* Foundation.framework */; };
+		E205881415F235BC002FF41F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881315F235BC002FF41F /* CoreGraphics.framework */; };
+		E205881A15F235BC002FF41F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E205881815F235BC002FF41F /* InfoPlist.strings */; };
+		E205881C15F235BC002FF41F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E205881B15F235BC002FF41F /* main.m */; };
+		E205882015F235BC002FF41F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E205881F15F235BC002FF41F /* AppDelegate.m */; };
+		E205882315F235BC002FF41F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E205882215F235BC002FF41F /* ViewController.m */; };
+		E205882615F235BC002FF41F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E205882415F235BC002FF41F /* ViewController.xib */; };
+		E205882E15F235BC002FF41F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205882D15F235BC002FF41F /* SenTestingKit.framework */; };
+		E205882F15F235BC002FF41F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205880F15F235BC002FF41F /* UIKit.framework */; };
+		E205883015F235BC002FF41F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881115F235BC002FF41F /* Foundation.framework */; };
+		E205883815F235BC002FF41F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E205883615F235BC002FF41F /* InfoPlist.strings */; };
+		E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E205883115F235BC002FF41F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E205880215F235BB002FF41F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E205880A15F235BC002FF41F;
+			remoteInfo = OscilloscopeView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E205880B15F235BC002FF41F /* OscilloscopeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OscilloscopeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E205880F15F235BC002FF41F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E205881115F235BC002FF41F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E205881315F235BC002FF41F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E205881715F235BC002FF41F /* OscilloscopeView-Info.plist */ = {isa = PBXFileReference; path = "OscilloscopeView-Info.plist"; sourceTree = "<group>"; };
+		E205881915F235BC002FF41F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E205881B15F235BC002FF41F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E205881D15F235BC002FF41F /* OscilloscopeView-Prefix.pch */ = {isa = PBXFileReference; path = "OscilloscopeView-Prefix.pch"; sourceTree = "<group>"; };
+		E205881E15F235BC002FF41F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E205881F15F235BC002FF41F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E205882115F235BC002FF41F /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		E205882215F235BC002FF41F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E205882515F235BC002FF41F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		E205882C15F235BC002FF41F /* OscilloscopeViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OscilloscopeViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E205882D15F235BC002FF41F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E205883515F235BC002FF41F /* OscilloscopeViewTests-Info.plist */ = {isa = PBXFileReference; path = "OscilloscopeViewTests-Info.plist"; sourceTree = "<group>"; };
+		E205883715F235BC002FF41F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E205883915F235BC002FF41F /* OscilloscopeViewTests.h */ = {isa = PBXFileReference; path = OscilloscopeViewTests.h; sourceTree = "<group>"; };
+		E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscilloscopeViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E205880815F235BC002FF41F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205881015F235BC002FF41F /* UIKit.framework in Frameworks */,
+				E205881215F235BC002FF41F /* Foundation.framework in Frameworks */,
+				E205881415F235BC002FF41F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E205882815F235BC002FF41F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205882E15F235BC002FF41F /* SenTestingKit.framework in Frameworks */,
+				E205882F15F235BC002FF41F /* UIKit.framework in Frameworks */,
+				E205883015F235BC002FF41F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E205880015F235BB002FF41F = {
+			isa = PBXGroup;
+			children = (
+				E205881515F235BC002FF41F /* OscilloscopeView */,
+				E205883315F235BC002FF41F /* OscilloscopeViewTests */,
+				E205880E15F235BC002FF41F /* Frameworks */,
+				E205880C15F235BC002FF41F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E205880C15F235BC002FF41F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E205880B15F235BC002FF41F /* OscilloscopeView.app */,
+				E205882C15F235BC002FF41F /* OscilloscopeViewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E205880E15F235BC002FF41F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E205880F15F235BC002FF41F /* UIKit.framework */,
+				E205881115F235BC002FF41F /* Foundation.framework */,
+				E205881315F235BC002FF41F /* CoreGraphics.framework */,
+				E205882D15F235BC002FF41F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E205881515F235BC002FF41F /* OscilloscopeView */ = {
+			isa = PBXGroup;
+			children = (
+				E205881E15F235BC002FF41F /* AppDelegate.h */,
+				E205881F15F235BC002FF41F /* AppDelegate.m */,
+				E205882115F235BC002FF41F /* ViewController.h */,
+				E205882215F235BC002FF41F /* ViewController.m */,
+				E205882415F235BC002FF41F /* ViewController.xib */,
+				E205881615F235BC002FF41F /* Supporting Files */,
+			);
+			path = OscilloscopeView;
+			sourceTree = "<group>";
+		};
+		E205881615F235BC002FF41F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E205881715F235BC002FF41F /* OscilloscopeView-Info.plist */,
+				E205881815F235BC002FF41F /* InfoPlist.strings */,
+				E205881B15F235BC002FF41F /* main.m */,
+				E205881D15F235BC002FF41F /* OscilloscopeView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E205883315F235BC002FF41F /* OscilloscopeViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				E205883915F235BC002FF41F /* OscilloscopeViewTests.h */,
+				E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */,
+				E205883415F235BC002FF41F /* Supporting Files */,
+			);
+			path = OscilloscopeViewTests;
+			sourceTree = "<group>";
+		};
+		E205883415F235BC002FF41F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E205883515F235BC002FF41F /* OscilloscopeViewTests-Info.plist */,
+				E205883615F235BC002FF41F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E205880A15F235BC002FF41F /* OscilloscopeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E205883E15F235BC002FF41F /* Build configuration list for PBXNativeTarget "OscilloscopeView" */;
+			buildPhases = (
+				E205880715F235BC002FF41F /* Sources */,
+				E205880815F235BC002FF41F /* Frameworks */,
+				E205880915F235BC002FF41F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OscilloscopeView;
+			productName = OscilloscopeView;
+			productReference = E205880B15F235BC002FF41F /* OscilloscopeView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E205882B15F235BC002FF41F /* OscilloscopeViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E205884115F235BC002FF41F /* Build configuration list for PBXNativeTarget "OscilloscopeViewTests" */;
+			buildPhases = (
+				E205882715F235BC002FF41F /* Sources */,
+				E205882815F235BC002FF41F /* Frameworks */,
+				E205882915F235BC002FF41F /* Resources */,
+				E205882A15F235BC002FF41F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E205883215F235BC002FF41F /* PBXTargetDependency */,
+			);
+			name = OscilloscopeViewTests;
+			productName = OscilloscopeViewTests;
+			productReference = E205882C15F235BC002FF41F /* OscilloscopeViewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E205880215F235BB002FF41F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E205880515F235BB002FF41F /* Build configuration list for PBXProject "OscilloscopeView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E205880015F235BB002FF41F;
+			productRefGroup = E205880C15F235BC002FF41F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E205880A15F235BC002FF41F /* OscilloscopeView */,
+				E205882B15F235BC002FF41F /* OscilloscopeViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E205880915F235BC002FF41F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205881A15F235BC002FF41F /* InfoPlist.strings in Resources */,
+				E205882615F235BC002FF41F /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E205882915F235BC002FF41F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205883815F235BC002FF41F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E205882A15F235BC002FF41F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E205880715F235BC002FF41F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205881C15F235BC002FF41F /* main.m in Sources */,
+				E205882015F235BC002FF41F /* AppDelegate.m in Sources */,
+				E205882315F235BC002FF41F /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E205882715F235BC002FF41F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E205883215F235BC002FF41F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E205880A15F235BC002FF41F /* OscilloscopeView */;
+			targetProxy = E205883115F235BC002FF41F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E205881815F235BC002FF41F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E205881915F235BC002FF41F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E205882415F235BC002FF41F /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E205882515F235BC002FF41F /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		E205883615F235BC002FF41F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E205883715F235BC002FF41F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E205883C15F235BC002FF41F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E205883D15F235BC002FF41F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E205883F15F235BC002FF41F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OscilloscopeView/OscilloscopeView-Prefix.pch";
+				INFOPLIST_FILE = "OscilloscopeView/OscilloscopeView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E205884015F235BC002FF41F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OscilloscopeView/OscilloscopeView-Prefix.pch";
+				INFOPLIST_FILE = "OscilloscopeView/OscilloscopeView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E205884215F235BC002FF41F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OscilloscopeView.app/OscilloscopeView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OscilloscopeView/OscilloscopeView-Prefix.pch";
+				INFOPLIST_FILE = "OscilloscopeViewTests/OscilloscopeViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E205884315F235BC002FF41F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OscilloscopeView.app/OscilloscopeView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OscilloscopeView/OscilloscopeView-Prefix.pch";
+				INFOPLIST_FILE = "OscilloscopeViewTests/OscilloscopeViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E205880515F235BB002FF41F /* Build configuration list for PBXProject "OscilloscopeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E205883C15F235BC002FF41F /* Debug */,
+				E205883D15F235BC002FF41F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E205883E15F235BC002FF41F /* Build configuration list for PBXNativeTarget "OscilloscopeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E205883F15F235BC002FF41F /* Debug */,
+				E205884015F235BC002FF41F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E205884115F235BC002FF41F /* Build configuration list for PBXNativeTarget "OscilloscopeViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E205884215F235BC002FF41F /* Debug */,
+				E205884315F235BC002FF41F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E205880215F235BB002FF41F /* Project object */;
+}

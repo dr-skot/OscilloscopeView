@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Novocaine.h"
+#import "RingBuffer.h"
+#import "AudioFileReader.h"
+#import "AudioFileWriter.h"
 
 @interface ViewController : UIViewController
-
+{
+  RingBuffer *ringBuffer;
+  Novocaine *audioManager;
+  AudioFileReader *fileReader;
+  AudioFileWriter *fileWriter;
+}
 @end

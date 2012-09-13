@@ -8,17 +8,21 @@
 
 #import "ViewController.h"
 #import "OscilloscopePath.h"
+#import "OscilloscopeView.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) OscilloscopePath *pathMaker;
+@property (strong, nonatomic) OscilloscopeView *oscilloscopeView;
 @end
 
 @implementation ViewController
 @synthesize pathMaker = _pathMaker;
+@synthesize oscilloscopeView = _oscilloscopeView;
 
 - (void)dealloc
 {
   self.pathMaker = nil;
+  self.oscilloscopeView = nil;
   [super dealloc];
 }
 
@@ -27,23 +31,10 @@
   [super viewDidLoad];
   
   self.view.backgroundColor = UIColor.blackColor;
-
-  self.pathMaker = [[OscilloscopePath alloc] initWithSize:self.view.bounds.size];
   
-  oscilloscope = [CAShapeLayer layer];
-  [oscilloscope setStrokeColor:UIColor.greenColor.CGColor];
-  [oscilloscope setFillColor:UIColor.clearColor.CGColor];
-  [oscilloscope setLineWidth:2];
-  
-  [self.view.layer addSublayer:oscilloscope];
-  oscilloscope.frame = self.view.bounds;
-  
-}
-
-- (void)viewDidUnload
-{
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
+  self.oscilloscopeView = [[OscilloscopeView alloc] initWithFrame:self.view.bounds];
+  [self.view addSubview:self.oscilloscopeView];
+  [self.oscilloscopeView release]; // because it got overretained when assigned  
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,16 +54,11 @@
      ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
      if (ringBuffer->NumUnreadFrames() >= framesPerSample) {
        ringBuffer->FetchData(frameBuffer, framesPerSample, 0, 1);
-       [self.pathMaker setData:frameBuffer numFrames:framesPerSample numChannels:1];
-       [self performSelectorOnMainThread:@selector(changeWave) withObject:nil waitUntilDone:NO];
+       [self.oscilloscopeView refreshWithData:frameBuffer numFrames:framesPerSample numChannels:1];
+       //[self performSelectorOnMainThread:@selector(changeWave) withObject:nil waitUntilDone:NO];
      }
    }];
   
-}
-
-- (void)changeWave
-{
-  oscilloscope.path = self.pathMaker.path;
 }
 
 

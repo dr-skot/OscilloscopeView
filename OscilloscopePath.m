@@ -28,7 +28,7 @@
 {
   if (self = [super init]) {
     self.size = size;
-    self.stride = 1;
+    self.stride = 1.0;
   }
   return self;
 }
@@ -56,7 +56,7 @@
   CGMutablePathRef path = CGPathCreateMutable();
   
   if (_numFrames > 0) {
-    CGPathMoveToPoint(path, nil, 0, h2 + _data[0] + hScale);
+    CGPathMoveToPoint(path, nil, 0, h2 + _data[0] * hScale);
     for (int t = 1; t < w; t += _stride) {
       CGPathAddLineToPoint(path, nil, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
     }

@@ -19,7 +19,7 @@
 		E205882F15F235BC002FF41F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205880F15F235BC002FF41F /* UIKit.framework */; };
 		E205883015F235BC002FF41F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881115F235BC002FF41F /* Foundation.framework */; };
 		E205883815F235BC002FF41F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E205883615F235BC002FF41F /* InfoPlist.strings */; };
-		E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */; };
+		E205883B15F235BC002FF41F /* OscilloscopeViewTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = E205883A15F235BC002FF41F /* OscilloscopeViewTests.mm */; };
 		E20588AA15F24C11002FF41F /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E20588A315F24C11002FF41F /* AudioFileReader.mm */; };
 		E20588AB15F24C11002FF41F /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E20588A315F24C11002FF41F /* AudioFileReader.mm */; };
 		E20588AC15F24C11002FF41F /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E20588A515F24C11002FF41F /* AudioFileWriter.m */; };
@@ -36,6 +36,11 @@
 		E2BD404D1601FAB000234916 /* OscilloscopePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD404B1601FAB000234916 /* OscilloscopePath.m */; };
 		E2BD405016021A1900234916 /* OscilloscopeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2BD404F16021A1800234916 /* OscilloscopeView.mm */; };
 		E2BD405116021A1900234916 /* OscilloscopeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2BD404F16021A1800234916 /* OscilloscopeView.mm */; };
+		E2BD405216022F5F00234916 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E56DCD15FBC324002CB1D5 /* QuartzCore.framework */; };
+		E2BD405316022F5F00234916 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B615F24C52002FF41F /* Accelerate.framework */; };
+		E2BD405416022F5F00234916 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B415F24C3D002FF41F /* AudioToolbox.framework */; };
+		E2BD405516022F5F00234916 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B215F24C35002FF41F /* CoreAudio.framework */; };
+		E2BD405616022F5F00234916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881315F235BC002FF41F /* CoreGraphics.framework */; };
 		E2E56DCE15FBC324002CB1D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E56DCD15FBC324002CB1D5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +73,7 @@
 		E205883515F235BC002FF41F /* OscilloscopeViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OscilloscopeViewTests-Info.plist"; sourceTree = "<group>"; };
 		E205883715F235BC002FF41F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E205883915F235BC002FF41F /* OscilloscopeViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OscilloscopeViewTests.h; sourceTree = "<group>"; };
-		E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscilloscopeViewTests.m; sourceTree = "<group>"; };
+		E205883A15F235BC002FF41F /* OscilloscopeViewTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OscilloscopeViewTests.mm; sourceTree = "<group>"; };
 		E20588A215F24C11002FF41F /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
 		E20588A315F24C11002FF41F /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
 		E20588A415F24C11002FF41F /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
@@ -107,9 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E205882E15F235BC002FF41F /* SenTestingKit.framework in Frameworks */,
+				E2BD405216022F5F00234916 /* QuartzCore.framework in Frameworks */,
+				E2BD405316022F5F00234916 /* Accelerate.framework in Frameworks */,
+				E2BD405416022F5F00234916 /* AudioToolbox.framework in Frameworks */,
+				E2BD405516022F5F00234916 /* CoreAudio.framework in Frameworks */,
 				E205882F15F235BC002FF41F /* UIKit.framework in Frameworks */,
 				E205883015F235BC002FF41F /* Foundation.framework in Frameworks */,
+				E2BD405616022F5F00234916 /* CoreGraphics.framework in Frameworks */,
+				E205882E15F235BC002FF41F /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				E205883915F235BC002FF41F /* OscilloscopeViewTests.h */,
-				E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */,
+				E205883A15F235BC002FF41F /* OscilloscopeViewTests.mm */,
 				E205883415F235BC002FF41F /* Supporting Files */,
 			);
 			path = OscilloscopeViewTests;
@@ -338,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */,
+				E205883B15F235BC002FF41F /* OscilloscopeViewTests.mm in Sources */,
 				E20588AB15F24C11002FF41F /* AudioFileReader.mm in Sources */,
 				E20588AD15F24C11002FF41F /* AudioFileWriter.m in Sources */,
 				E20588AF15F24C11002FF41F /* Novocaine.m in Sources */,

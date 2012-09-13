@@ -10,10 +10,9 @@
 
 @interface OscilloscopeView : UIView
 
-@property (strong, nonatomic) UIColor *bgColor;
-@property (strong, nonatomic) UIColor *gridColor;
-@property (strong, nonatomic) UIColor *waveColor;
-@property (readonly) CGPathRef path;
+@property (strong, nonatomic) UIColor *color;
+@property (nonatomic) float thickness;
+@property (nonatomic) float stride;
 
 - (void)refreshWithData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels;
 

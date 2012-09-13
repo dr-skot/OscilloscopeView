@@ -7,7 +7,11 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "ViewController.h"
 
-@interface OscilloscopeViewTests : SenTestCase
+@interface OscilloscopeViewTests : SenTestCase {
+  ViewController *controller;
+}
+
 
 @end

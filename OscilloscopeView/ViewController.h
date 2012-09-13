@@ -22,4 +22,11 @@
   AudioFileWriter *fileWriter;
   CAShapeLayer *oscilloscope;
 }
+
+@property (nonatomic) BOOL hasRecordedSomething;
+@property (strong, nonatomic) NSURL *recordURL;
+
+- (void)startRecording;
+- (void)stopRecording;
+
 @end

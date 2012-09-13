@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIColor *bgColor;
 @property (strong, nonatomic) UIColor *gridColor;
 @property (strong, nonatomic) UIColor *waveColor;
+@property (readonly) CGPathRef path;
 
 - (void)refreshWithData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels;
 

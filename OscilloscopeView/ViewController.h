@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Novocaine.h"
 #import "RingBuffer.h"
 #import "AudioFileReader.h"
 #import "AudioFileWriter.h"
+
 
 @interface ViewController : UIViewController
 {
@@ -18,5 +20,6 @@
   Novocaine *audioManager;
   AudioFileReader *fileReader;
   AudioFileWriter *fileWriter;
+  CAShapeLayer *oscilloscope;
 }
 @end

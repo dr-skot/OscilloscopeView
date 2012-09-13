@@ -1,3 +1,4 @@
+CGMutablePathRef path = CGPathCreateMutable();
 //
 //  OscilloscopeView.m
 //  OscilloscopeView
@@ -43,9 +44,29 @@
   [self performSelectorOnMainThread:@selector(setNeedsDisplay) withObject:self waitUntilDone:NO];
 }
 
+- (CGPathRef)path
+{
+  float w = self.bounds.size.width;
+  float h = self.bounds.size.height; 
+  float h2 = h/2;
+  float hScale = h2 / 1.25;
+  float wScale = _numFrames / w;
+
+  CGMutablePathRef path = CGPathCreateMutable();
+
+  float stride = 1;
+  if (_numFrames > 0) {
+    CGPathMoveToPoint(path, nil, 0, h2 + _data[0] + hScale);
+    for (int t = 1; t < w; t += stride) {
+      CGPathAddLineToPoint(path, nil, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
+    }
+  }
+
+  return path;
+}
+
 - (void)drawRect:(CGRect)rect
 {
-  NSLog(@"draw");
   float w = self.bounds.size.width;
   float h = self.bounds.size.height; 
   float h2 = h/2;
@@ -57,7 +78,6 @@
   CGContextSetFillColorWithColor(ctx, _bgColor.CGColor);
   CGContextFillRect(ctx, self.bounds);
   
-  // grid
   if (_gridColor) {
     CGContextSetStrokeColorWithColor(ctx, _gridColor.CGColor);
     CGContextSetLineWidth(ctx, 0.5);
@@ -75,13 +95,17 @@
   
   CGContextSetStrokeColorWithColor(ctx, _waveColor.CGColor);
   CGContextSetLineWidth(ctx, 2);
-  
-  CGContextBeginPath(ctx);
-  CGContextMoveToPoint(ctx, 0, h2);
-  for (int t = 0; t < _numFrames; t += _numChannels) {
-    CGContextAddLineToPoint(ctx, t, h2 + _data[(int)(t * wScale)] * hScale);
+
+  // wave
+  float stride = 4;
+  if (_numFrames > 0) {
+    CGContextBeginPath(ctx);
+    CGContextMoveToPoint(ctx, 0, h2 + _data[0] * hScale);
+    for (int t = 1; t < w; t += stride) {
+      CGContextAddLineToPoint(ctx, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
+    }
+    CGContextStrokePath(ctx);
   }
-  CGContextStrokePath(ctx);
 }
 
 @end

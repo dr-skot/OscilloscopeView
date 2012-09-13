@@ -1,4 +1,3 @@
-CGMutablePathRef path = CGPathCreateMutable();
 //
 //  OscilloscopeView.m
 //  OscilloscopeView
@@ -8,6 +7,8 @@ CGMutablePathRef path = CGPathCreateMutable();
 //
 
 #import "OscilloscopeView.h"
+#import "Novocaine.h"
+#import "RingBuffer.h"
 
 @interface OscilloscopeView ()
 @property (nonatomic) float *data;
@@ -34,6 +35,32 @@ CGMutablePathRef path = CGPathCreateMutable();
     self.stride = 1.0;
   }
   return self;
+}
+
+- (void)start
+{
+  RingBuffer *ringBuffer = new RingBuffer(32768, 2); 
+  Novocaine *audioManager = [Novocaine audioManager];
+  audioManager.samplingRate = 16000;
+  audioManager.numInputChannels = 1;
+  
+  int framesPerSample = 5120;
+  float *frameBuffer = new float[framesPerSample * sizeof(float)];
+  
+  [audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
+   {
+     ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
+     if (ringBuffer->NumUnreadFrames() >= framesPerSample) {
+       ringBuffer->FetchData(frameBuffer, framesPerSample, 0, 1);
+       [self refreshWithData:frameBuffer numFrames:framesPerSample numChannels:1];
+     }
+   }];
+  
+}
+
+- (void)stop
+{
+  
 }
 
 - (void)refreshWithData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels

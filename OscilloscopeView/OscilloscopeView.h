@@ -15,5 +15,7 @@
 @property (nonatomic) float stride;
 
 - (void)refreshWithData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels;
+- (void)start;
+- (void)stop;
 
 @end

@@ -7,26 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import "Novocaine.h"
-#import "RingBuffer.h"
-#import "AudioFileReader.h"
-#import "AudioFileWriter.h"
-
 
 @interface ViewController : UIViewController
-{
-  RingBuffer *ringBuffer;
-  Novocaine *audioManager;
-  AudioFileReader *fileReader;
-  AudioFileWriter *fileWriter;
-  CAShapeLayer *oscilloscope;
-}
-
-@property (nonatomic) BOOL hasRecordedSomething;
-@property (strong, nonatomic) NSURL *recordURL;
-
-- (void)startRecording;
-- (void)stopRecording;
 
 @end

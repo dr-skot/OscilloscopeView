@@ -20,8 +20,6 @@
 		E205883015F235BC002FF41F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205881115F235BC002FF41F /* Foundation.framework */; };
 		E205883815F235BC002FF41F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E205883615F235BC002FF41F /* InfoPlist.strings */; };
 		E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */; };
-		E205884615F23634002FF41F /* OscilloscopeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E205884515F23634002FF41F /* OscilloscopeView.mm */; };
-		E205884715F23634002FF41F /* OscilloscopeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E205884515F23634002FF41F /* OscilloscopeView.mm */; };
 		E20588AA15F24C11002FF41F /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E20588A315F24C11002FF41F /* AudioFileReader.mm */; };
 		E20588AB15F24C11002FF41F /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E20588A315F24C11002FF41F /* AudioFileReader.mm */; };
 		E20588AC15F24C11002FF41F /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E20588A515F24C11002FF41F /* AudioFileWriter.m */; };
@@ -69,8 +67,6 @@
 		E205883715F235BC002FF41F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E205883915F235BC002FF41F /* OscilloscopeViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OscilloscopeViewTests.h; sourceTree = "<group>"; };
 		E205883A15F235BC002FF41F /* OscilloscopeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscilloscopeViewTests.m; sourceTree = "<group>"; };
-		E205884415F23634002FF41F /* OscilloscopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscilloscopeView.h; sourceTree = "<group>"; };
-		E205884515F23634002FF41F /* OscilloscopeView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OscilloscopeView.mm; sourceTree = "<group>"; };
 		E20588A215F24C11002FF41F /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
 		E20588A315F24C11002FF41F /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
 		E20588A415F24C11002FF41F /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 				E205882415F235BC002FF41F /* ViewController.xib */,
 				E2BD404A1601FAB000234916 /* OscilloscopePath.h */,
 				E2BD404B1601FAB000234916 /* OscilloscopePath.m */,
-				E205884415F23634002FF41F /* OscilloscopeView.h */,
-				E205884515F23634002FF41F /* OscilloscopeView.mm */,
 				E205881615F235BC002FF41F /* Supporting Files */,
 			);
 			path = OscilloscopeView;
@@ -325,7 +319,6 @@
 				E205881C15F235BC002FF41F /* main.m in Sources */,
 				E205882015F235BC002FF41F /* AppDelegate.mm in Sources */,
 				E205882315F235BC002FF41F /* ViewController.mm in Sources */,
-				E205884615F23634002FF41F /* OscilloscopeView.mm in Sources */,
 				E20588AA15F24C11002FF41F /* AudioFileReader.mm in Sources */,
 				E20588AC15F24C11002FF41F /* AudioFileWriter.m in Sources */,
 				E20588AE15F24C11002FF41F /* Novocaine.m in Sources */,
@@ -339,7 +332,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E205883B15F235BC002FF41F /* OscilloscopeViewTests.m in Sources */,
-				E205884715F23634002FF41F /* OscilloscopeView.mm in Sources */,
 				E20588AB15F24C11002FF41F /* AudioFileReader.mm in Sources */,
 				E20588AD15F24C11002FF41F /* AudioFileWriter.m in Sources */,
 				E20588AF15F24C11002FF41F /* Novocaine.m in Sources */,

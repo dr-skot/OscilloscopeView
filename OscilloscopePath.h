@@ -11,6 +11,7 @@
 @interface OscilloscopePath : NSObject
 
 @property (nonatomic) CGSize size;
+@property (nonatomic) float stride;
 @property (readonly) CGPathRef path;
 
 - (id)initWithSize:(CGSize)size;

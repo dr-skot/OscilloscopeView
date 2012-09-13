@@ -19,15 +19,22 @@
 @implementation OscilloscopePath
 
 @synthesize size = _size;
+@synthesize stride = _stride;
 @synthesize data = _data;
 @synthesize numFrames = _numFrames;
 @synthesize numChannels = _numChannels;
 
 - (id)initWithSize:(CGSize)size
 {
-  self = [super init];
-  if (self) self.size = size;
+  if (self = [super init]) {
+    self.size = size;
+    self.stride = 1;
+  }
   return self;
+}
+
+- (id)init {
+  return [self initWithSize:CGSizeMake(100, 50)];
 }
 
 - (void)setData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels
@@ -48,10 +55,9 @@
   
   CGMutablePathRef path = CGPathCreateMutable();
   
-  float stride = 1;
   if (_numFrames > 0) {
     CGPathMoveToPoint(path, nil, 0, h2 + _data[0] + hScale);
-    for (int t = 1; t < w; t += stride) {
+    for (int t = 1; t < w; t += _stride) {
       CGPathAddLineToPoint(path, nil, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
     }
   }

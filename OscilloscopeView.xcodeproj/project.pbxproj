@@ -33,6 +33,10 @@
 		E20588B315F24C35002FF41F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B215F24C35002FF41F /* CoreAudio.framework */; };
 		E20588B515F24C3D002FF41F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B415F24C3D002FF41F /* AudioToolbox.framework */; };
 		E20588B715F24C52002FF41F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20588B615F24C52002FF41F /* Accelerate.framework */; };
+		E2BD40441601F97900234916 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E2BD40431601F97900234916 /* .gitignore */; };
+		E2BD404C1601FAB000234916 /* OscilloscopePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD404B1601FAB000234916 /* OscilloscopePath.m */; };
+		E2BD404D1601FAB000234916 /* OscilloscopePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BD404B1601FAB000234916 /* OscilloscopePath.m */; };
+		E2E56DCE15FBC324002CB1D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E56DCD15FBC324002CB1D5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		E20588B215F24C35002FF41F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		E20588B415F24C3D002FF41F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E20588B615F24C52002FF41F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		E2BD40431601F97900234916 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E2BD404A1601FAB000234916 /* OscilloscopePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OscilloscopePath.h; path = ../OscilloscopePath.h; sourceTree = "<group>"; };
+		E2BD404B1601FAB000234916 /* OscilloscopePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OscilloscopePath.m; path = ../OscilloscopePath.m; sourceTree = "<group>"; };
+		E2E56DCD15FBC324002CB1D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E56DCE15FBC324002CB1D5 /* QuartzCore.framework in Frameworks */,
 				E20588B715F24C52002FF41F /* Accelerate.framework in Frameworks */,
 				E20588B515F24C3D002FF41F /* AudioToolbox.framework in Frameworks */,
 				E20588B315F24C35002FF41F /* CoreAudio.framework in Frameworks */,
@@ -110,9 +119,7 @@
 		E205880015F235BB002FF41F = {
 			isa = PBXGroup;
 			children = (
-				E20588B615F24C52002FF41F /* Accelerate.framework */,
-				E20588B415F24C3D002FF41F /* AudioToolbox.framework */,
-				E20588B215F24C35002FF41F /* CoreAudio.framework */,
+				E2BD40431601F97900234916 /* .gitignore */,
 				E20588A115F24C11002FF41F /* Novocaine */,
 				E205881515F235BC002FF41F /* OscilloscopeView */,
 				E205883315F235BC002FF41F /* OscilloscopeViewTests */,
@@ -133,6 +140,10 @@
 		E205880E15F235BC002FF41F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2E56DCD15FBC324002CB1D5 /* QuartzCore.framework */,
+				E20588B615F24C52002FF41F /* Accelerate.framework */,
+				E20588B415F24C3D002FF41F /* AudioToolbox.framework */,
+				E20588B215F24C35002FF41F /* CoreAudio.framework */,
 				E205880F15F235BC002FF41F /* UIKit.framework */,
 				E205881115F235BC002FF41F /* Foundation.framework */,
 				E205881315F235BC002FF41F /* CoreGraphics.framework */,
@@ -149,9 +160,11 @@
 				E205882115F235BC002FF41F /* ViewController.h */,
 				E205882215F235BC002FF41F /* ViewController.mm */,
 				E205882415F235BC002FF41F /* ViewController.xib */,
-				E205881615F235BC002FF41F /* Supporting Files */,
+				E2BD404A1601FAB000234916 /* OscilloscopePath.h */,
+				E2BD404B1601FAB000234916 /* OscilloscopePath.m */,
 				E205884415F23634002FF41F /* OscilloscopeView.h */,
 				E205884515F23634002FF41F /* OscilloscopeView.mm */,
+				E205881615F235BC002FF41F /* Supporting Files */,
 			);
 			path = OscilloscopeView;
 			sourceTree = "<group>";
@@ -274,6 +287,7 @@
 			files = (
 				E205881A15F235BC002FF41F /* InfoPlist.strings in Resources */,
 				E205882615F235BC002FF41F /* ViewController.xib in Resources */,
+				E2BD40441601F97900234916 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +330,7 @@
 				E20588AC15F24C11002FF41F /* AudioFileWriter.m in Sources */,
 				E20588AE15F24C11002FF41F /* Novocaine.m in Sources */,
 				E20588B015F24C11002FF41F /* RingBuffer.mm in Sources */,
+				E2BD404C1601FAB000234916 /* OscilloscopePath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +344,7 @@
 				E20588AD15F24C11002FF41F /* AudioFileWriter.m in Sources */,
 				E20588AF15F24C11002FF41F /* Novocaine.m in Sources */,
 				E20588B115F24C11002FF41F /* RingBuffer.mm in Sources */,
+				E2BD404D1601FAB000234916 /* OscilloscopePath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +504,7 @@
 				E205884015F235BC002FF41F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E205884115F235BC002FF41F /* Build configuration list for PBXNativeTarget "OscilloscopeViewTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +513,7 @@
 				E205884315F235BC002FF41F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

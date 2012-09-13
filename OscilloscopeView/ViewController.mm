@@ -7,18 +7,18 @@
 //
 
 #import "ViewController.h"
-#import "OscilloscopeView.h"
+#import "OscilloscopePath.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) OscilloscopeView *tdView;
+@property (strong, nonatomic) OscilloscopePath *pathMaker;
 @end
 
 @implementation ViewController
-@synthesize tdView;
+@synthesize pathMaker = _pathMaker;
 
 - (void)dealloc
 {
-  self.tdView = nil;
+  self.pathMaker = nil;
   [super dealloc];
 }
 
@@ -28,8 +28,7 @@
   
   self.view.backgroundColor = UIColor.blackColor;
 
-  tdView = [[OscilloscopeView alloc] initWithFrame:self.view.bounds];
-  // [self.view addSubview:tdView];
+  self.pathMaker = [[OscilloscopePath alloc] initWithSize:self.view.bounds.size];
   
   oscilloscope = [CAShapeLayer layer];
   [oscilloscope setStrokeColor:UIColor.greenColor.CGColor];
@@ -64,8 +63,7 @@
      ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
      if (ringBuffer->NumUnreadFrames() >= framesPerSample) {
        ringBuffer->FetchData(frameBuffer, framesPerSample, 0, 1);
-       [tdView refreshWithData:frameBuffer numFrames:framesPerSample numChannels:1];
-       NSLog(@"change path");
+       [self.pathMaker setData:frameBuffer numFrames:framesPerSample numChannels:1];
        [self performSelectorOnMainThread:@selector(changeWave) withObject:nil waitUntilDone:NO];
      }
    }];
@@ -74,7 +72,7 @@
 
 - (void)changeWave
 {
-  oscilloscope.path = tdView.path;
+  oscilloscope.path = self.pathMaker.path;
 }
 
 
@@ -90,7 +88,7 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
   NSLog(@"rotated");
-  tdView.frame = self.view.bounds;
+  self.pathMaker.size = self.view.bounds.size;
 }
 
 @end

@@ -53,11 +53,14 @@
   }
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-  NSLog(@"rotated");
-  self.oscilloscopeView.frame = self.view.bounds;
+  CGRect rect = self.view.bounds;
+  rect.size.width = self.view.bounds.size.height;
+  rect.size.height = self.view.bounds.size.width;
+  self.oscilloscopeView.frame = rect;
   [self.oscilloscopeView setNeedsDisplay];
 }
+
 
 @end

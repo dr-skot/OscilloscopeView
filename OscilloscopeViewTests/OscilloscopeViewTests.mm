@@ -30,26 +30,5 @@
   STAssertNotNil(controller, @"can make a controller");
 }
 
-- (void)testHasNotRecordedAnything
-{
-  STAssertFalse(controller.hasRecordedSomething, @"has not recorded anything");
-}
-
-- (void)testHasNoFile
-{
-  NSURL *url = controller.recordURL;
-  STAssertNotNil(url, @"url is not null");
-  STAssertFalse([[NSFileManager defaultManager] fileExistsAtPath:[url path]], @"has no file at record url");
-}
-
-- (void)testIsRecordingWhileRecording
-{
-  [controller startRecording];
-  [controller stopRecording];
-}
-
-- (void)testCanRecordWhileControllerIsWorking
-{
-}
 
 @end

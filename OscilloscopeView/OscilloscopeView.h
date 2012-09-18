@@ -12,9 +12,9 @@
 
 @property (strong, nonatomic) UIColor *color;
 @property (nonatomic) float thickness;
-@property (nonatomic) float stride;
+@property (nonatomic) float pixelStride;
+@property (nonatomic) UInt32 redrawsPerSec;
 
-- (void)refreshWithData:(float *)data numFrames:(UInt32)numFrames numChannels:(UInt32)numChannels;
 - (void)start;
 - (void)stop;
 

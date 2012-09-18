@@ -9,6 +9,8 @@
 #import "OscilloscopeView.h"
 #import "Novocaine.h"
 
+// TODO I don't think this has to be .mm anymore
+
 @interface OscilloscopeView ()
 @property (nonatomic) float *data;
 @property (nonatomic) UInt32 numFrames;

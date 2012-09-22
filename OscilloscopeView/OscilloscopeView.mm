@@ -54,13 +54,10 @@
 }
 
 - (void)start
-{  
-  // by observation:
-  float dataUpdatesPerSec = 86.15;
+{ 
+  // by observation
   UInt32 framesPerUpdate = 512;
-
-  // does this have any effect?
-  self.audioManager.samplingRate = framesPerUpdate * self.redrawsPerSec;
+  float dataUpdatesPerSec = (float) self.audioManager.samplingRate / framesPerUpdate;
 
   int cyclesBeforeDraw = (int) (dataUpdatesPerSec / self.redrawsPerSec);
 
@@ -104,10 +101,13 @@
   
   if (_numFrames > 0) {
     
+    NSLog(@"width %f, frames %lu, stride %f", w, _numFrames, _pixelStride);
+    
     // make the path
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, 0, h2 + _data[0] * hScale);
-    for (int t = 1; t < w; t += _pixelStride) {
+    for (float t = 1; t < w; t += _pixelStride) {
+      NSLog(@"point %f, %f", t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
       CGContextAddLineToPoint(ctx, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
     }
 

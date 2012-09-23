@@ -70,7 +70,7 @@
        [self refreshWithData:buffer numFrames:bufferIndex numChannels:numChannels];
        bufferIndex = 0;
      }
-     memcpy(buffer + bufferIndex * sizeof(float), data, numFrames * sizeof(float));
+     memcpy(buffer + bufferIndex, data, numFrames * sizeof(float));
      bufferIndex += numFrames;
    };
 }
@@ -100,14 +100,11 @@
   CGContextClearRect(ctx, self.bounds);
   
   if (_numFrames > 0) {
-    
-    NSLog(@"width %f, frames %lu, stride %f", w, _numFrames, _pixelStride);
-    
+        
     // make the path
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, 0, h2 + _data[0] * hScale);
     for (float t = 1; t < w; t += _pixelStride) {
-      NSLog(@"point %f, %f", t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
       CGContextAddLineToPoint(ctx, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
     }
 

@@ -90,14 +90,14 @@
 
 - (void)drawRect:(CGRect)rect
 {
-  float w = self.bounds.size.width;
-  float h = self.bounds.size.height;
+  float w = rect.size.width;
+  float h = rect.size.height;
   float h2 = h/2;
   float hScale = h2 / 1.25;
   float wScale = _numFrames / w;
   CGContextRef ctx = UIGraphicsGetCurrentContext();
   
-  CGContextClearRect(ctx, self.bounds);
+  CGContextClearRect(ctx, rect);
   
   if (_numFrames > 0) {
     

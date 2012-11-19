@@ -43,7 +43,7 @@
   if (self) {
     self.color = [UIColor greenColor];
     self.thickness = 2.0;
-    self.pixelStride = 1.0;
+    self.pixelStride = [[UIScreen mainScreen] scale];
 
     self.audioManager = [Novocaine audioManager];
     self.audioManager.numInputChannels = 1;

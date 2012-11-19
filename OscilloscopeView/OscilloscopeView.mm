@@ -94,21 +94,16 @@
   float h = rect.size.height;
   float h2 = h/2;
   float hScale = h2 / 1.25;
-  float wScale = _numFrames / w;
   CGContextRef ctx = UIGraphicsGetCurrentContext();
   
   CGContextClearRect(ctx, rect);
   
   if (_numFrames > 0) {
-    
-    NSLog(@"width %f, frames %lu, stride %f", w, _numFrames, _pixelStride);
-    
     // make the path
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, 0, h2 + _data[0] * hScale);
-    for (float t = 1; t < w; t += _pixelStride) {
-      NSLog(@"point %f, %f", t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
-      CGContextAddLineToPoint(ctx, t, h2 + _data[(int)(t * wScale)*_numChannels] * hScale);
+    for (int t = 1; t < w; t += _pixelStride) {
+      CGContextAddLineToPoint(ctx, t, h2 + _data[(int)t*_numChannels] * hScale);
     }
 
     // stroke it
